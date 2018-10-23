@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>4101034553</fileChecksum>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\..\common\startup_ewarm.c</file>
+            <file>$PROJ_DIR$\Release\Obj\board_key.o</file>
+            <file>$PROJ_DIR$\..\hal_lcd.c</file>
+            <file>$PROJ_DIR$\..\mt9d111.h</file>
+            <file>$PROJ_DIR$\..\pinmux.c</file>
+            <file>$PROJ_DIR$\..\uart_if_amo.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\rom.h</file>
+            <file>$PROJ_DIR$\..\..\common\timer_if.h</file>
+            <file>$PROJ_DIR$\Release\Obj\mt9d111.o</file>
+            <file>$PROJ_DIR$\Release\Obj\camera_app.o</file>
+            <file>$PROJ_DIR$\Release\Obj\hal_lcd.pbi</file>
+            <file>$PROJ_DIR$\..\..\common\udma_if.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\device.h</file>
+            <file>$PROJ_DIR$\Release\Obj\uart_if_amo.__cstat.et</file>
+            <file>$PROJ_DIR$\..\hal_lcd.h</file>
+            <file>$PROJ_DIR$\..\..\common\udma_if.c</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\prcm.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\source\nonos.h</file>
+            <file>$PROJ_DIR$\..\..\common\uart_if.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\..\i2cconfig.h</file>
+            <file>$PROJ_DIR$\..\..\common\gpio_if.h</file>
+            <file>$PROJ_DIR$\..\uart_if_amo.c</file>
+            <file>$PROJ_DIR$\Release\Obj\button_if.pbi</file>
+            <file>$PROJ_DIR$\..\i2cconfig.c</file>
+            <file>$PROJ_DIR$\..\mt9d111.c</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\ewarm\Release\Exe\driverlib.a</file>
+            <file>$PROJ_DIR$\Release\Obj\pinmux.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\wlan_rx_filters.h</file>
+            <file>$PROJ_DIR$\Release\Obj\gpio_if.o</file>
+            <file>$PROJ_DIR$\..\..\common\timer_if.c</file>
+            <file>$PROJ_DIR$\..\main.c</file>
+            <file>$PROJ_DIR$\..\board_key.c</file>
+            <file>$PROJ_DIR$\..\button_if_amo.c</file>
+            <file>$PROJ_DIR$\..\button_if_amo.h</file>
+            <file>$PROJ_DIR$\..\camera_app.c</file>
+            <file>$PROJ_DIR$\..\board_key.h</file>
+            <file>$PROJ_DIR$\..\..\common\gpio_if.c</file>
+            <file>$PROJ_DIR$\..\camera_app.h</file>
+            <file>$PROJ_DIR$\Release\Obj\main.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$PROJ_DIR$\Release\Obj\i2cconfig.o</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\trace.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_apps_rcm.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Release\Obj\startup_ewarm.__cstat.et</file>
+            <file>$PROJ_DIR$\..\pinmux.h</file>
+            <file>$PROJ_DIR$\Release\Obj\uart_if_amo.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+            <file>$PROJ_DIR$\..\..\common\common.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+            <file>$PROJ_DIR$\Release\Obj\board_key.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\Release\Obj\gpio_if.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\udma_if.o</file>
+            <file>$PROJ_DIR$\Release\Obj\pinmux.o</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\cc3200.icf</file>
+            <file>$PROJ_DIR$\Release\Obj\button_if_amo.o</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\socket.h</file>
+            <file>$PROJ_DIR$\..\..\common\button_if.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\Release\Obj\i2cconfig.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\Release\Obj\button_if_amo.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\gpio_if.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\hal_lcd.o</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_types.h</file>
+            <file>$PROJ_DIR$\Release\Obj\board_key.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\pin.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\gpio.h</file>
+            <file>$PROJ_DIR$\Release\Obj\udma_if.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\Release\Obj\uart_if.o</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_common_reg.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\camera.h</file>
+            <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\button_if.o</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\udma.h</file>
+            <file>$PROJ_DIR$\Release\Obj\camera_app.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\netcfg.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\Release\Obj\camera_app.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\ewarm\NON_OS\Exe\simplelink.a</file>
+            <file>$PROJ_DIR$\Release\Obj\uart_if.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\timer_if.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\fs.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Release\Obj\udma_if.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\hal_lcd.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\cc_pal.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\interrupt.h</file>
+            <file>$PROJ_DIR$\Release\Obj\startup_ewarm.o</file>
+            <file>$PROJ_DIR$\Release\Obj\timer_if.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\tcp_socket.pbd</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\rom_map.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\timer.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\spi.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\netapp.h</file>
+            <file>$PROJ_DIR$\Release\Obj\timer_if.o</file>
+            <file>$PROJ_DIR$\Release\Obj\mt9d111.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\uart_if_amo.o</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_uart.h</file>
+            <file>$PROJ_DIR$\Release\Exe\tcp_socket.bin</file>
+            <file>$PROJ_DIR$\Release\Obj\i2cconfig.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\button_if.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_gpio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_memmap.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\simplelink.h</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_udma.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\debug.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\i2c.h</file>
+            <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\startup_ewarm.pbi</file>
+            <file>$PROJ_DIR$\..\..\common\button_if.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\rom_patch.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\source\objInclusion.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\utils.h</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_camera.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\user.h</file>
+            <file>$PROJ_DIR$\Release\Obj\mt9d111.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\pinmux.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\..\..\..\driverlib\uart.h</file>
+            <file>$PROJ_DIR$\Release\Obj\button_if_amo.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Exe\tcp_socket.out</file>
+            <file>$PROJ_DIR$\..\..\common\uart_if.c</file>
+            <file>$PROJ_DIR$\..\..\..\inc\hw_ints.h</file>
+            <file>$PROJ_DIR$\..\..\..\simplelink\include\wlan.h</file>
+            <file>$PROJ_DIR$\Release\Obj\uart_if.pbi</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 132</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\common\startup_ewarm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 95</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 119</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 46</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 134 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94 134 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal_lcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 6 75 130 88 45 67 14 123 5 125 115 61 112 134 100 98 16 94 47 82 129 69 53 121</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\pinmux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 128</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 67 112 109 70 6 98 121 71 16 123</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16 70 112 98 67 109 6 71 123 121 47</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\common\udma_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 55</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 72</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 45 98 69 105 16 115 134 114 79 11 129 82 53 112 67 6 71 94 130 88 125 121 61</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uart_if_amo.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 104</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 48</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88 130 67 115 61 16 98 69 93 53 112 70 6 5 129 45 19 125 43 82 121</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\i2cconfig.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 107</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 20 98 88 67 117 125 111 6 112 16 115 129 69 121 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\mt9d111.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 8</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 127</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\common\timer_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 112 134 116 94 99 6 98 121 16 7</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16 94 134 6 112 116 99 98 7 67 121</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 77</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 118</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 115 88 125 129 69 45 43 53 82 61 113 126 92 122 42 87 59 101 135 12 81 28 17 134 67 112 75 6 98 121 94 16 130 123 11 50 5 47 38 71 99 7 34 14 21 36</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 81 50 75 14 88 82 135 16 71 36 129 115 59 113 61 67 98 123 47 7 21 43 69 45 126 42 17 53 134 112 6 94 130 11 5 38 99 34 125 122 87 101 12 28 92 121 93</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board_key.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 1</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 12 67 75 123 115 92 113 135 16 6 47 36 88 45 87 61 98 109 71 50 34 125 122 101 28 53 134 112 94 130 70 11 5 38 7 14 43 129 69 82 126 42 59 81 17 93 121</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\button_if_amo.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 58</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 131</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112 129 98 88 134 94 43 69 67 6 71 70 120 115 45 125 93 121</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\camera_app.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 80</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50 16 82 101 112 76 3 115 129 43 93 98 99 5 47 45 69 88 122 28 113 53 67 124 6 79 123 11 20 38 125 121 87 12 92 61 126 42 59 135 81 17</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\common\gpio_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 54</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121 16 44 125 134 70 98 88 67 112 94 71 6 21 61 115 45 129 69</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\common\button_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 23</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 108</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 115 88 125 129 69 51 110 45 67 134 6 98 121 71 94 70 112 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112 98 88 134 94 51 125 67 6 71 70 120 115 45 110 93 129 69 121</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Release\Exe\tcp_socket.out</name>
+            <outputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 57 1 58 9 29 66 41 39 8 56 95 102 104 55 84 26 73 40 91</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\common\uart_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 136</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 85</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 115 88 125 129 69 51 110 45 61 49 53 82 67 112 16 70 130 6 98 121 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 125 130 115 67 88 61 16 98 51 110 45 93 53 112 70 6 18 129 69 49 82 121</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+</project>

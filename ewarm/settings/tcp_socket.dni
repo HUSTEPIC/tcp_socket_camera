@@ -1,0 +1,44 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[LMIFTDIDriver]
+LMI_ResetMode=0x00000000
+[DebugChecksum]
+Checksum=927462750
+[LMIFTDI]
+LMIFTDIserialNo=LQ19IULCA
+LMIFTDIfoundProbes=FFFFFFFF:LQ19IULCA:
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[Disassemble mode]
+mode=0
+[Breakpoints]
+Bp0=_ "STD_CODE" "0x2000A6FC" 0 0 0 0 "" 0 ""
+Bp1=_ "EMUL_DATA" "lRetVal" 0 0 0 116 0 "" 0 "" 0 0 0 4294967295
+Count=2
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Aliases]
+A0=_ "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\inc\c\DLib_Product_string.h" ""
+A1=_ "D:\GIT\a0132167_sdk_1.1.0\source-1p1-rahul\simplelink\cc_pal.c" ""
+A2=_ "D:\GIT\a0132167_sdk_1.1.0\source-1p1-rahul\simplelink\source\driver.c" ""
+A3=_ "D:\GIT\a0132167_sdk_1.1.0\source-1p1-rahul\simplelink\source\nonos.c" ""
+Count=4
+SuppressDialog=0
