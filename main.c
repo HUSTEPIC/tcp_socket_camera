@@ -107,10 +107,12 @@
 #define APPLICATION_NAME        "TCP Socket Camera"
 #define APPLICATION_VERSION     "1.1.1"
 
-//#define IP_ADDR             0xc0a80109/* 192.168.1.9 */
+#define WLAN_DEL_ALL_PROFILES   0xFF
+
+#define IP_ADDR             0xc0a80104/* 192.168.1.4 */
 //#define IP_ADDR            0xc0a8032F /* 192.168.3.47 */    
 //#define IP_ADDR                         0xc0a80064 /* 192.168.0.101 */
-#define IP_ADDR            0xc0a82B70 /* 192.168.43.112 */
+//#define IP_ADDR            0xc0a82B70 /* 192.168.43.112 */
 
 #define PORT_NUM            5001
 #define BUF_SIZE            (1400-2)
@@ -1369,6 +1371,83 @@ static void KeyPressedCB(uint8 keys)
 
 #endif
 
+
+//*****************************************************************************
+//
+//! \brief Connecting to a WLAN Accesspoint using SmartConfig provisioning
+//!
+//! Enables SmartConfig provisioning for adding a new connection profile
+//! to CC3200. Since we have set the connection policy to Auto, once
+//! SmartConfig is complete, CC3200 will connect automatically to the new
+//! connection profile added by smartConfig.
+//!
+//! \param[in]                     None
+//!
+//! \return                        None
+//!
+//! \note
+//!
+//! \warning                    If the WLAN connection fails or we don't
+//!                             acquire an IP address, We will be stuck in this
+//!                             function forever.
+//
+//*****************************************************************************
+int SmartConfigConnect()
+{
+    unsigned char policyVal;
+    long lRetVal = -1;
+
+    // Clear all profiles 
+    // This is of course not a must, it is used in this example to make sure
+    // we will connect to the new profile added by SmartConfig
+    //
+    lRetVal = sl_WlanProfileDel(WLAN_DEL_ALL_PROFILES);
+    ASSERT_ON_ERROR(lRetVal);
+
+    //set AUTO policy
+    lRetVal = sl_WlanPolicySet(  SL_POLICY_CONNECTION,
+                      SL_CONNECTION_POLICY(1,0,0,0,1),
+                      &policyVal,
+                      1 /*PolicyValLen*/);
+    ASSERT_ON_ERROR(lRetVal);
+
+    // Start SmartConfig
+    // This example uses the unsecured SmartConfig method
+    //
+    lRetVal = sl_WlanSmartConfigStart(0,                /*groupIdBitmask*/
+                           SMART_CONFIG_CIPHER_NONE,    /*cipher*/
+                           0,                           /*publicKeyLen*/
+                           0,                           /*group1KeyLen*/
+                           0,                           /*group2KeyLen */
+                           NULL,                        /*publicKey */
+                           NULL,                        /*group1Key */
+                           NULL);                       /*group2Key*/
+    ASSERT_ON_ERROR(lRetVal);
+
+    // Wait for WLAN Event
+    while((!IS_CONNECTED(g_ulStatus)) || (!IS_IP_ACQUIRED(g_ulStatus)))
+    {
+#ifndef SL_PLATFORM_MULTI_THREADED
+              _SlNonOsMainLoopTask(); 
+#endif
+    }
+    HalLcdWriteString("Smartconfig success", HAL_LCD_LINE_5);
+     //
+     // Turn ON the RED LED to indicate connection success
+     //
+     GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+     //wait for few moments
+     MAP_UtilsDelay(80000000);
+     //reset to default AUTO policy
+     lRetVal = sl_WlanPolicySet(  SL_POLICY_CONNECTION,
+                           SL_CONNECTION_POLICY(1,0,0,0,0),
+                           &policyVal,
+                           1 /*PolicyValLen*/);
+     ASSERT_ON_ERROR(lRetVal);
+
+     return SUCCESS;
+}
+
 //****************************************************************************
 //                            MAIN FUNCTION
 //****************************************************************************
@@ -1526,6 +1605,7 @@ void main()
 
     UART_PRINT("Device is configured in default state \r\n");
 
+    CLR_STATUS_BIT_ALL(g_ulStatus);
     //
     // Asumption is that the device is configured in station mode already
     // and it is in its default state
@@ -1539,24 +1619,31 @@ void main()
 
     UART_PRINT("Device started as STATION \r\n");
 
-
-#if defined(HAL_OLED)    
-    HalLcdWriteString("Connecting...", HAL_LCD_LINE_5);
-#endif
-
-    UART_PRINT("Connecting to AP: %s ...\r\n",SSID_NAME);
-
-    // Connecting to WLAN AP - Set with static parameters defined at common.h
-    // After this call we will be connected and have IP address
-    lRetVal = WlanConnect();
-    if(lRetVal < 0)
-    {
-        UART_PRINT("Connection to AP failed \r\n");
-        LOOP_FOREVER();
-    }
-
-
-    UART_PRINT("Connected to AP: %s \r\n",SSID_NAME);
+   /* Connect to our AP using SmartConfig method */
+   lRetVal = SmartConfigConnect();
+   if(lRetVal < 0)
+   {
+     ERR_PRINT(lRetVal);
+     HalLcdWriteString("Smartconfig error", HAL_LCD_LINE_5);
+   }
+   
+//#if defined(HAL_OLED)    
+//    HalLcdWriteString("Connecting...", HAL_LCD_LINE_5);
+//#endif
+//
+//    UART_PRINT("Connecting to AP: %s ...\r\n",SSID_NAME);
+//
+//    // Connecting to WLAN AP - Set with static parameters defined at common.h
+//    // After this call we will be connected and have IP address
+//    lRetVal = WlanConnect();
+//    if(lRetVal < 0)
+//    {
+//        UART_PRINT("Connection to AP failed \r\n");
+//        LOOP_FOREVER();
+//    }
+//
+//
+//    UART_PRINT("Connected to AP: %s \r\n",SSID_NAME);
 
     UART_PRINT("Device IP: %d.%d.%d.%d\r\n\r\n",
                       SL_IPV4_BYTE(g_ulIpAddr,3),
@@ -1565,10 +1652,10 @@ void main()
                       SL_IPV4_BYTE(g_ulIpAddr,0));
 
 #if defined(HAL_OLED)    
-    HalLcdWriteString("Connected", HAL_LCD_LINE_5);
-
-    sprintf(str, "%s", SSID_NAME);
-    HalLcdWriteString(str, HAL_LCD_LINE_6);
+//    HalLcdWriteString("Connected", HAL_LCD_LINE_5);
+//
+//    sprintf(str, "%s", SSID_NAME);
+//    HalLcdWriteString(str, HAL_LCD_LINE_6);
 
     sprintf(str, "IP: %d.%d.%d.%d",
                     SL_IPV4_BYTE(g_ulIpAddr,3),
